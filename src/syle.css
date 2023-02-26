@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: lightslategray;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.conteudo-principal {
+    text-align: center;
+    width: 400px;
+}
+
+.resultado-pesquisa {
+    width: 400px;
+    font-size: 20px;
+    padding-bottom: 60px;
+}
+
+.conteudo-principal input {
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 5px;
+}
+
+.conteudo-principal button {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: cadetblue;
+    cursor: pointer;
+}
