@@ -9,9 +9,8 @@ async function pesquisar() {
     let input = document.getElementsByName("input-palavra");
     let palavraASerPesquisada = input[0].value;
 
-    if(palavraASerPesquisada === ''){
-        return
-    }
+    if(palavraASerPesquisada === '') return
+    
 
     pesquisarPalvra(palavraASerPesquisada);
 }
