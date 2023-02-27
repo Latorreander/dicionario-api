@@ -5,22 +5,22 @@ addEventListener("keydown", (event) => {
     }
 });
 
-async function pesquisar() {
-    let input = document.getElementsByName("input-palavra");
-    let palavraASerPesquisada = input[0].value;
+async function search() {
+    let input = document.getElementsByName("input-word");
+    let wordToBeSearch = input[0].value;
 
-    if(palavraASerPesquisada === '') return
+    if(wordToBeSearch === '') return
     
 
-    pesquisarPalvra(palavraASerPesquisada);
+    wordSearch(wordToBeSearch);
 }
 
-async function pesquisarPalvra(palavraASerPesquisada) {
-    const url = `https://api.dicionario-aberto.net/word/${palavraASerPesquisada}/1`;
+async function wordSearch(wordToBeSearch) {
+    const url = `https://api.dicionario-aberto.net/word/${wordToBeSearch}/1`;
     const response = await fetch(url);
-    const pesquisa = await response.json();
+    const searchResult = await response.json();
 
-    const resposta = document.getElementsByClassName("resultado-pesquisa");
+    const answerArea = document.getElementsByClassName("search-result");
 
-    resposta[0].innerHTML = `<p>${pesquisa[0].xml}</p>`;
+    answerArea[0].innerHTML = `<p>${searchResult[0].xml}</p>`;
 }
