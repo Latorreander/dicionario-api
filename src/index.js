@@ -1,3 +1,10 @@
+addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        const button = document.getElementById("search-button");
+        button.click();
+    }
+});
+
 async function pesquisar() {
     let input = document.getElementsByName("input-palavra");
     let palavraASerPesquisada = input[0].value;

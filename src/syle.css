@@ -23,21 +23,28 @@ h1 {
     width: 400px;
 }
 
-.resultado-pesquisa {
-    width: 400px;
-    font-size: 20px;
-    padding-bottom: 60px;
-}
-
 .conteudo-principal input {
     padding: 10px;
     border: solid 2px;
     border-radius: 5px;
 }
 
-.conteudo-principal button {
+.resultado-pesquisa {
+    width: 400px;
+    font-size: 20px;
+    border: solid 2px;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+button {
     padding: 8px;
     border-radius: 5px;
     background-color: cadetblue;
     cursor: pointer;
+}
+
+p {
+    margin-top: 20px;
 }
