@@ -6,7 +6,7 @@ addEventListener("keydown", (event) => {
 });
 
 async function wordSearch(wordToBeSearch) {
-    const url = `https://api.dicionario-aberto.net/word/${wordToBeSearch}/1`;
+    const url = `https://api.dicionario-aberto.net/word/${(wordToBeSearch).toLowerCase()}/1`;
     const response = await fetch(url);
     const searchResult = await response.json();
 
