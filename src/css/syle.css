@@ -19,7 +19,6 @@ body {
 .main-content {
     border: 5px groove #4682b4;
     padding: 24px;
-
     text-align: center;
     min-width: 314px;
     max-width: 85%;
@@ -41,8 +40,11 @@ h1 {
 input {
     border-radius: 5px;
     padding: 10px;
-    font-size: 1rem;
+    margin: 0 auto;
+    max-width: 12rem;
+    font-size: .8rem;
     text-align: center;
+    display: block;
     background-color: #e0ffff;
     border: solid 2px #1d384f;
 }

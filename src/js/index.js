@@ -28,7 +28,7 @@ async function wordSearch(wordToBeSearch) {
     answerArea[0].innerHTML = `<p>${searchResult[0].xml}</p>`;
 }
 
-async function search() {
+function search() {
     let input = document.getElementsByName("input-word");
     let wordToBeSearch = input[0].value;
 
