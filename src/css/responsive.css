@@ -1,0 +1,53 @@
+@media (max-width: 1020px) {
+    h1 {
+        font-size: 0.7rem;
+    }
+
+    .search-result {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 769px) {
+    .search-result {
+        font-size: 0.5rem;
+    }
+
+    input {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 520px) {
+    h1 {
+        font-size: 0.6rem;
+    }
+
+    input {
+        font-size: 0.5rem;
+    }
+
+    .search-result {
+        font-size: 0.5rem;
+    }
+
+    .main-content {
+        padding: 18px 24px;
+    }
+}
+
+@media (max-width: 426px) {
+    .search-result {
+        font-size: 0.3rem;
+    }
+
+    input {
+        font-size: 0.4rem;
+    }
+}
+
+@media (max-width: 376px) {
+    input {
+        font-size: 0.3rem;
+    }
+}
