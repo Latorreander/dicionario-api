@@ -1,37 +1,20 @@
-addEventListener("keydown", (event) => {
-    if (event.key === "Enter") {
-        const button = document.getElementById("search-button");
-        button.click();
-    }
-});
-
-async function wordSearch(wordToBeSearch) {
-    const url = `https://api.dicionario-aberto.net/word/${(wordToBeSearch).toLowerCase()}/1`;
+async function searchWord(typedWord) {
+    const url = `https://api.dicionario-aberto.net/word/${typedWord.toLowerCase()}/1`;
     const response = await fetch(url);
     const searchResult = await response.json();
 
-    if(wordToBeSearch === ''){
-        return alert('VOCÊ PRECISA DIGITAR UMA PALAVRA!')
-    }
-    try{
-        if(wordToBeSearch !== searchResult[0].word){
-           
-        }
-    }
-    catch{
-         alert('PALAVRA INEXISTENTE!')
-    }
+    try {
+        const answerArea = document.querySelector(".search-result");
 
-    
-    const answerArea = document.getElementsByClassName("search-result");
-    
-    answerArea[0].innerHTML = `<p>${searchResult[0].xml}</p>`;
+        answerArea.innerHTML = `<p>${searchResult[0].xml}</p>`;
+        console.log(searchResult);
+    } catch {
+        alert("PALAVRA INEXISTENTE!");
+    }
 }
 
-function search() {
-    let input = document.getElementsByName("input-word");
-    let wordToBeSearch = input[0].value;
-
-    wordSearch(wordToBeSearch);
+function send() {
+    const typedWord = document.getElementById("typedword").value;
+    searchWord(typedWord);
+    return false;
 }
-

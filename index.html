@@ -15,10 +15,17 @@
 
             <div class="search-result"></div>
 
-            <input
-                type="text"name="input-word"placeholder="Digite uma Palavra">
-
-            <button id="search-button" onclick="search()">Pesquisar</button>
+            <form onsubmit="return send()">
+                <input
+                    type="text"
+                    name="word"
+                    id="typedword"
+                    autocomplete="off"
+                    placeholder="Digite uma Palavra"
+                    required
+                />
+                <button type="submit" id="search-button">Pesquisar</button>
+            </form>
         </main>
         <script src="./src/js/index.js"></script>
     </body>
